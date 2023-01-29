@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeonApi.MainPage">
+    <StackLayout>
+
+        <Label Text="Lista de comentarios" FontSize="Title" Padding="30,10,30,10"/>
+        <SearchBar x:Name="Buscador" 
+                   Placeholder="Ingrese el id" 
+                   TextColor="Black"/>
+
+        <Button Text="Llamar API" Clicked="Button_Clicked" />
+
+        <ListView x:Name="ListaDemo">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding id}" Detail="{Binding title}"  />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
